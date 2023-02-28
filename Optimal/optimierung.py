@@ -136,12 +136,10 @@ def Linesearch(x0,f,df,ddf,N,e_x = 1e-5, e_f = 1e-15):
         #x = NewtonStep(x_alt,df,ddf)    
         #x = bactracking_reg_newton(x_alt,df,ddf)  
         #x,B0 = quasiNewton(x,x_alt,df,B0)
-        x,B0 = quasiNewton_3D(x,x_alt,df,B0)
+        x,B0 = quasiNewton_3D(x,x_alt,df,B0)       
         
-
-        #plt.plot(x,f(x),'ro')
-        ax.scatter(x[0],x[1],f(x), c='r', marker='o', s = 50)        
-        #print(f(x))            
+        #ax.scatter(x[0],x[1],f(x), c='r', marker='o', s = 50)        
+                    
         X[k] = np.linalg.norm(x_alt-x)
         k += 1 
         # Abbruchkriterium

@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "hello.C": "cpp",
+        "hello_ext.C": "cpp",
+        "test.C": "cpp"
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/Cpp",
+    "cmake.configureOnOpen": false
+}
