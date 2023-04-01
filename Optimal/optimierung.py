@@ -23,16 +23,16 @@ def Forward_diff(f,x):
 ## Nummerische Integration
 ######## ***************************************  
 
-def runge_kutta_k4(f,x,u):
-    #RK4 integration with zero-order hold on u
-    h = np.ones(len(x))*0.05      # time step (20Hz) 
+def runge_kutta_k4(f,x,u,h=1):
+    #RK4 integration with zero-order hold on u    
 
     f1 = f(x, u)
-    f2 = f(x + 0.5*h*f1, u)
-    f3 = f(x + 0.5*h*f2, u)
+    f2 = f(x + 1/2*h*f1, u)
+    f3 = f(x + 1/2*h*f2, u)
     f4 = f(x + h*f3, u)
 
     return x + (h/6.0)*(f1 + 2*f2 + 2*f3 + f4)
+
 
 ######## ***************************************  
 ## Optimierungsverfahren
